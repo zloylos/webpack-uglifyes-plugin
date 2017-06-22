@@ -1,0 +1,20 @@
+{
+  "name": "webpack-uglifyes-plugin",
+  "version": "0.0.1",
+  "description": "UglifyJS plugin for webpack with ES support",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Denis Hananein",
+  "license": "MIT",
+  "dependencies": {
+    "source-map": "^0.5.6",
+    "uglify-es": "^3.0.19",
+    "webpack": "^3.0.0",
+    "webpack-sources": "^1.0.1"
+  },
+  "peerDependencies": {
+    "webpack": "^3.0.0"
+  }
+}

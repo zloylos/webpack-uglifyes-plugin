@@ -1,0 +1,9 @@
+.DS_Store
+npm-debug.log
+/build
+/.buildtmp
+/node_modules/*
+!/node_modules/common
+!/node_modules/client
+!/node_modules/server
+
