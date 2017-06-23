@@ -1,6 +1,6 @@
 {
   "name": "webpack-uglifyes-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "UglifyJS plugin for webpack with ES support",
   "main": "src/index.js",
   "scripts": {

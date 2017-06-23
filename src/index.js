@@ -9,8 +9,9 @@ class UglifyEsPlugin {
         this._options = Object.assign(true, {
             test: /\.js($|\?)/i,
             warningFilter: () => true,
-            sourceMap: false,
-            mangle: {},
+            sourceMap: true,
+            mangle: true,
+            toplevel: false,
             comments: /^\**!|@preserve|@license/
         }, options);
     }
@@ -68,7 +69,11 @@ class UglifyEsPlugin {
         const input = this._processSourceMap(asset);
 
         // Compress.
-        const compressedCode = uglify.minify(input).code;
+        const compressedCode = uglify.minify(input, {
+            mangle: this._options.mangle,
+            toplevel: this._options.toplevel,
+            sourceMap: this._options.sourceMap
+        }).code;
 
         // Extract comments.
         let extractedComments = [];
